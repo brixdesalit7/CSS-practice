@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+
+$header-background : rgb(249, 0, 191);
+$aside-background : rgb(255, 203, 14);
+$main-background : red;
+$article-background : yellow;
+$footer-background : pink;
+$font-size : 30px;
+$padding : 20px 15px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+.row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: minmax(auto, auto);
+    gap: 15px;
+}
+.header {
+    background-color: $header-background;
+    font-size: $font-size;
+    padding: $padding;
+    grid-column: 1 / 5;
+    text-align: center;
+}
+.menu {
+    background-color: $aside-background;
+    font-size: $font-size;
+    grid-column: 1 / 2;
+    grid-row: 2 / 5;
+    padding: $padding;
+    text-align: center;
+}
+.main-content {
+    background-color: $main-background;
+    font-size: $font-size;
+    grid-column:  2 / 5;
+    padding: $padding;
+    text-align: center;
+}
+.related-article {
+    background-color: $article-background;
+    font-size: $font-size;
+    grid-column:  2 / 5;
+    padding: $padding;
+    text-align: center;
+}
+.footer {
+    background-color: $footer-background;
+    font-size: $font-size;
+    grid-column:  2 / 5;
+    padding: $padding;
+    text-align: center;
+}
+@media only screen and (max-width: 600px) {
+    .menu {
+        grid-column: 1 / 5;
+    }
+    .main-content {
+        grid-column: 1 / 5;
+    }
+    .related-article {
+        grid-column: 1 / 5;
+    }
+    .footer {
+        grid-column: 1 / 5;
+    }
+}
